@@ -30,7 +30,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::Get('logout',[AdminController::class, 'logout'])->name('logout');
     Route::Get('/dashboard',[dashboardController::class, 'index'])->middleware('must-admin');
 //    Route::Get('/Gerai',[GeraiController::class, 'index'],)->name('gerai');
-    Route::Get('/anak',[AnakController::class, 'index'])->middleware('must-admin');
+    Route::resource('/anak', AnakController::class)->middleware('must-admin');
     Route::Post('cari-mahasiswa', [GeraiController::class, 'cari'])->name('cari')->middleware('must-admin');
 
 });

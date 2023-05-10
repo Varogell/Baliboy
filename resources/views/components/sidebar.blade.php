@@ -47,9 +47,9 @@
                        class="nav-link has-dropdown"
                        data-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Data User</span></a>
                     <ul class="dropdown-menu">
-                        <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
+                        <li class="{{ Request::is('anak') ? 'active' : '' }}">
                             <a class="nav-link"
-                               href="{{ url('layout-default-layout') }}">Default Layout</a>
+                               href="{{ url('/admin/anak') }}">Data Anak</a>
                         </li>
                         <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
                             <a class="nav-link"
@@ -89,7 +89,7 @@
                         <ul class="dropdown-menu">
                             <li class="{{ Request::is('1') ? 'active' : '' }}">
                                 <a class="nav-link"
-                                   href="{{ url('layout-default-layout') }}">Default Layout</a>
+                                href="{{ url('/admin/anak') }}">Data Anak</a>
                             </li>
                             <li class="{{ Request::is('2') ? 'active' : '' }}">
                                 <a class="nav-link"
