@@ -61,6 +61,10 @@
                                     <input type="text"
                                         class="form-control" name="telepon" id="telepon">
                                 </div>
+                                <div>
+                                <label for="image">Foto Akte </label>
+                                    <input type="file" class="form-control" required="required" name="akte">
+                                </div>
                             <div class="card-footer text-right">
                                 <button class="btn btn-primary mr-1"
                                     type="submit">Submit</button>

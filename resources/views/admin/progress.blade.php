@@ -22,6 +22,7 @@
                                         <form class="row mb-3 mt-5" action="" method="POST">
                                         <div class="input-group">
                                             <a href="{{ route('progress.create') }}" class="btn btn-icon icon-left btn-success"><i class="fa-solid fa-plus"></i> Tambah Data</a>
+                                            <a href="{{ route('cetak_pdf') }}" class="btn btn-icon icon-left btn-warning"><i class="fa-solid fa-plus"></i> Cetak Data</a>
                                             <input type="text" class="form-control ml-3" placeholder="Search" value="{{ (request()->cari) ? request()->cari : '' }}" name="cari" >
                                             <div class="input-group-btn">
                                                 <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
@@ -50,9 +51,9 @@
                                             <tr>
                                                 <td>{{ $i++}}</td>
                                                 <td>{{ $k->id_progress}}</td>
-                                                @foreach($progress as $item)
-                                                <td value="{{ $item->id_anak }}">{{ $item->nama}}</td>
-                                                @endforeach
+                                               
+                                                <td value="{{ $k->id_anak }}">{{ $k->nama}}</td>
+                                               
                                                 <td>{{ $k->bulan_ke}}</td>
                                                 <td>{{ $k->panjang_bayi}}</td>
                                                 <td>{{ $k->berat_bayi}}</td>

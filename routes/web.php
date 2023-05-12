@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::Get('/dashboard',[dashboardController::class, 'index'])->middleware('must-admin');
     Route::resource('/anak', AnakController::class)->middleware('must-admin');
     Route::resource('/progress', ProgressController::class)->middleware('must-admin');
-
+    Route::get('/cetak_pdf', [ProgressController::class, 'cetak_pdf'])->name('cetak_pdf');
 });
 
 Route::Get('/testing',[GeraiController::class, 'showData']);

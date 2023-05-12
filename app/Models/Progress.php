@@ -30,7 +30,7 @@ protected $fillable = [
     {
         return $this->select('progress_babies.id_progress', 'anak.nama', 'anak.id_anak', 'progress_babies.bulan_ke', 'progress_babies.panjang_bayi', 'progress_babies.berat_bayi')
             ->join('anak', 'progress_babies.id_anak', '=', 'anak.id_anak')
-            ->paginate(5);
+            ->paginate(100);
     }
 }
 
