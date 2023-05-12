@@ -8,7 +8,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-6 text-center">
                     <h2>Services</h2>
-                    <p>Logiswift adalah perusahaan logistik yang menawarkan berbagai layanan pengiriman barang secara cepat, aman, dan terpercaya. Layanan yang disediakan meliputi pengiriman darat, laut, dan udara, serta jasa pergudangan dan pengiriman dokumen. Selain itu, Logiswift juga menawarkan solusi logistik khusus untuk berbagai jenis industri, seperti e-commerce, FMCG, retail, dan manufaktur. Dengan pengalaman yang luas dan tim yang profesional, Logiswift siap memberikan solusi logistik terbaik untuk memenuhi kebutuhan pengiriman barang Anda.</p>
+                    <p>Miracle Baby</p>
                 </div>
             </div>
         </div>

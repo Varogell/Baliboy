@@ -5,9 +5,9 @@
         <div class="row gy-4">
             <div class="col-lg-5 col-md-12 footer-info">
                 <a href="index.html" class="logo d-flex align-items-center">
-                    <span>LogiSwift</span>
+                    <span>Miracle Baby</span>
                 </a>
-                <p>Follow Media Sosial LogiSwift untuk mendapatkan update an dari kami</p>
+                <p>Follow Media Sosial Miracle Baby untuk mendapatkan update an dari kami</p>
                 <div class="social-links d-flex mt-4">
                     <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                     <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -45,7 +45,7 @@
                     Jatimulyo, Kec. Lowokwaru,<br>
                     Kota Malang, Jawa Timur 65141 <br><br>
                     <strong>Phone:</strong> +6285234827389<br>
-                    <strong>Email:</strong> logiswift@gmail.com<br>
+                    <strong>Email:</strong> miraclebaby@gmail.com<br>
                 </p>
 
             </div>
@@ -55,7 +55,7 @@
 
     <div class="container mt-4">
         <div class="copyright">
-            &copy; Copyright <strong><span>LogiSwift</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Miracle Baby</span></strong>. All Rights Reserved
         </div>
     </div>
 

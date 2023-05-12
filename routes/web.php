@@ -10,6 +10,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnakController;
+use App\Http\Controllers\ProgressController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,9 +30,8 @@ Route::group(['prefix' => 'admin'], function(){
     Route::Post('/login',[AdminController::class, 'login_action'])->name('login.actionAdmin');
     Route::Get('logout',[AdminController::class, 'logout'])->name('logout');
     Route::Get('/dashboard',[dashboardController::class, 'index'])->middleware('must-admin');
-//    Route::Get('/Gerai',[GeraiController::class, 'index'],)->name('gerai');
     Route::resource('/anak', AnakController::class)->middleware('must-admin');
-    Route::Post('cari-mahasiswa', [GeraiController::class, 'cari'])->name('cari')->middleware('must-admin');
+    Route::resource('/progress', ProgressController::class)->middleware('must-admin');
 
 });
 

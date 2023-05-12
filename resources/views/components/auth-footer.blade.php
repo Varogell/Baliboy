@@ -1,3 +1,3 @@
   <div class="simple-footer">
-      Copyright &copy; LogiSwift 2023
+      Copyright &copy; Miracle baby 2023
   </div>

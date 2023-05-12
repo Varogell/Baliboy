@@ -45,7 +45,7 @@
                 <li class="nav-item dropdown {{ $type_menu === 'layout' ? 'active' : '' }}" hidden>
                     <a href="#"
                        class="nav-link has-dropdown"
-                       data-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Data User</span></a>
+                       data-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Data Balita</span></a>
                     <ul class="dropdown-menu">
                         <li class="{{ Request::is('anak') ? 'active' : '' }}">
                             <a class="nav-link"
@@ -85,7 +85,7 @@
                     <li class="nav-item dropdown {{ $type_menu === 'layout' ? 'active' : '' }}">
                         <a href="#"
                            class="nav-link has-dropdown"
-                           data-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Data User</span></a>
+                           data-toggle="dropdown"><i class="fa-solid fa-user"></i><span>Data Balita</span></a>
                         <ul class="dropdown-menu">
                             <li class="{{ Request::is('1') ? 'active' : '' }}">
                                 <a class="nav-link"
@@ -93,11 +93,11 @@
                             </li>
                             <li class="{{ Request::is('2') ? 'active' : '' }}">
                                 <a class="nav-link"
-                                   href="{{ url('transparent-sidebar') }}">Transparent Sidebar</a>
+                                   href="{{ url('/admin/progress') }}">Progress Anak</a>
                             </li>
                             <li class="{{ Request::is('3') ? 'active' : '' }}">
                                 <a class="nav-link"
-                                   href="{{ url('layout-top-navigation') }}">Top Navigation</a>
+                                   href="{{ url('layout-top-navigation') }}">Comming soon</a>
                             </li>
                         </ul>
                     </li>
@@ -106,35 +106,6 @@
 {{--                <a class="nav-link"--}}
 {{--                    href="{{ url('blank-page') }}"><i class="far fa-square"></i> <span>Blank Page</span></a>--}}
 {{--            </li>--}}
-                <li class="menu-header">Data Logistik</li>
-            <li class="nav-item dropdown {{ $type_menu === 'bootstrap' ? 'active' : '' }}">
-                <a href="#"
-                    class="nav-link has-dropdown"><i class="fa-solid fa-store"></i><span>Gerai</span></a>
-                <ul class="dropdown-menu">
-                    <li class="{{ Request::is('tambah-gerai') ? 'active' : '' }}">
-                        <a class="nav-link"
-                            href="{{ url('/admin/gerai') }}">Tambah Gerai</a>
-                    </li>
-                    <li class="{{ Request::is('bootstrap-typography') ? 'active' : '' }}">
-                        <a class="nav-link"
-                            href="{{ url('bootstrap-typography') }}">Typography</a>
-                    </li>
-                </ul>
-            </li>
-                <li class="nav-item dropdown {{ $type_menu === 'bootstrap' ? 'active' : '' }}">
-                    <a href="#"
-                       class="nav-link has-dropdown"><i class="fa-solid fa-cart-shopping"></i><span>Transaksi</span></a>
-                    <ul class="dropdown-menu">
-                        <li class="{{ Request::is('bootstrap-tooltip') ? 'active' : '' }}">
-                            <a class="nav-link"
-                               href="{{ url('bootstrap-tooltip') }}">Tooltip</a>
-                        </li>
-                        <li class="{{ Request::is('bootstrap-typography') ? 'active' : '' }}">
-                            <a class="nav-link"
-                               href="{{ url('bootstrap-typography') }}">Typography</a>
-                        </li>
-                    </ul>
-                </li>
         </ul>
     </aside>
 </div>
