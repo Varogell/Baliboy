@@ -53,7 +53,7 @@
                                             <tr>
                                                 <td>{{ $i++}}</td>
                                                 <td>{{ $k->id_anak}}</td>
-                                                <td><a href="{{asset('storage/' . $k->akte)}}"><img src="{{asset('storage/' . $k->akte)}}" style ="max-width: 90px"></a></td>
+                                                <td><img src="{{asset('file_upload')}}/{{$k->akte}}" style ="max-width: 90px"></td>
                                                 <td>{{ $k->nama}}</td>
                                                 <td>{{ $k->TTL}}</td>
                                                 <td>{{ $k->nama_ibu}}</td>

@@ -41,6 +41,7 @@ class AnakController extends Controller
             //jika data berhasil ditambahkan, akan kembali ke halaman utama
             return to_route('anak.index')->with('success', 'Anak Berhasil Ditambahkan');
     }
+    
     public function edit($id_anak)
     {
         //menampilkan detail data dengan menemukan berdasarkan id kota untuk diedit

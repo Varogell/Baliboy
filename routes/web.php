@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::Get('logout',[AdminController::class, 'logout'])->name('logout');
     Route::Get('/dashboard',[dashboardController::class, 'index'])->middleware('must-admin');
     Route::resource('/anak', AnakController::class)->middleware('must-admin');
+    Route::post('/anak', [AnakController::class, 'fileUpload'])->name('fileUpload');
     Route::resource('/progress', ProgressController::class)->middleware('must-admin');
     Route::get('/cetak_pdf', [ProgressController::class, 'cetak_pdf'])->name('cetak_pdf');
 });
