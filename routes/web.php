@@ -11,6 +11,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\chartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +35,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::post('/anak', [AnakController::class, 'fileUpload'])->name('fileUpload');
     Route::resource('/progress', ProgressController::class)->middleware('must-admin');
     Route::get('/cetak_pdf', [ProgressController::class, 'cetak_pdf'])->name('cetak_pdf');
+    Route::get('/line-chart', [chartController::class, 'lineChart']);
 });
 
 Route::Get('/testing',[GeraiController::class, 'showData']);
