@@ -94,13 +94,11 @@
                         function drawChart() {
                         var data = google.visualization.arrayToDataTable([
                         ['Year', 'Sales', 'Expenses'],
-                        ['2004',  1000,      400],
-                        ['2005',  1170,      460],
-                        ['2006',  660,       1120],
-                        ['2007',  1030,      540],
-                        ['2008',  2003,      200]
+                        ['2004', 200, 70],
+                        ['2002', 150, 10],
+                        ['2005', 300, 15],
                         ]);
-
+                        
                         var options = {
                         title: 'Company Performance',
                         curveType: 'function',
