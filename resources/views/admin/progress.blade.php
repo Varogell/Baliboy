@@ -83,32 +83,36 @@
                 </div>
             </div>
 <!--Grafik-->
-            <div>
+        
+            <div class="table-responsive">
             <html>
                 <head>
                     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
                     <script type="text/javascript">
+                        
+                        
                         google.charts.load('current', {'packages':['corechart']});
                         google.charts.setOnLoadCallback(drawChart);
-
+                        
                         function drawChart() {
-                        var data = google.visualization.arrayToDataTable([
-                        ['Year', 'Sales', 'Expenses'],
-                        ['2004', 200, 70],
-                        ['2002', 150, 10],
-                        ['2005', 300, 15],
+                            var data = google.visualization.arrayToDataTable([
+                                
+                                ['Bulan', 'Berat', 'Panjang'],
+                                @foreach ($progress as $k)
+                                [{{$k->bulan_ke}}, {{$k->berat_bayi}}, {{$k->panjang_bayi}}],
+                                @endforeach
                         ]);
                         
                         var options = {
-                        title: 'Company Performance',
-                        curveType: 'function',
-                        legend: { position: 'bottom' }
+                            title: 'Grafik Perkembangan Bayi',
+                            curveType: 'function',
+                            legend: { position: 'bottom' }
                         };
-
+                        
                         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
+                        
                         chart.draw(data, options);
-                        }
+                    }
                     </script>
                 </head>
             <body>
