@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Anak;
 use App\Models\Progress;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 class ProgressController extends Controller
 {
@@ -64,7 +65,18 @@ class ProgressController extends Controller
          Progress::find($id_progress)->delete();
          return redirect()->route('progress.index')-> with('success', 'Progress Berhasil Dihapus');
      }
+<<<<<<< HEAD
     
     
      
+=======
+
+    public function cetak_pdf()
+    {
+        $progress = (new \App\Models\Progress)->getFullInfo();
+        $pdf = PDF::loadview('admin.progress_pdf', ['progress'=>$progress]);
+        return $pdf->stream();
+    }
+>>>>>>> a49d70b12270eb96043f47b3b2e673aaa234fa8c
 }
+

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Anak;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class AnakController extends Controller
 {
@@ -32,10 +33,15 @@ class AnakController extends Controller
         //     'telepon' => 'required',
         //     ]);
             //fungsi eloquent untuk menambah data
+
+            if($request->file('akte')){
+                $akte = $request->file('akte')->store('storage','public');
+            }
             Anak::create($request->all());
             //jika data berhasil ditambahkan, akan kembali ke halaman utama
             return to_route('anak.index')->with('success', 'Anak Berhasil Ditambahkan');
     }
+    
     public function edit($id_anak)
     {
         //menampilkan detail data dengan menemukan berdasarkan id kota untuk diedit

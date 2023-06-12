@@ -37,6 +37,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>ID anak</th>
+                                            <th>Akte</th>
                                             <th>Nama</th>
                                             <th>TTL</th>
                                             <th>Nama Ibu</th>
@@ -52,6 +53,7 @@
                                             <tr>
                                                 <td>{{ $i++}}</td>
                                                 <td>{{ $k->id_anak}}</td>
+                                                <td><img src="{{asset('file_upload')}}/{{$k->akte}}" style ="max-width: 90px"></td>
                                                 <td>{{ $k->nama}}</td>
                                                 <td>{{ $k->TTL}}</td>
                                                 <td>{{ $k->nama_ibu}}</td>

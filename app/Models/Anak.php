@@ -25,6 +25,7 @@ protected $fillable = [
     'nama_ibu',
     'nama_ayah',
     'alamat',
-    'telepon'
+    'telepon',
+    'akte'
     ];
 }
