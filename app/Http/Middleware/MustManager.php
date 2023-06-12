@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\Finder\Exception\AccessDeniedException;
 
-class MustAdmin
+class MustManager
 {
     /**
      * Handle an incoming request.
@@ -21,7 +21,7 @@ class MustAdmin
 //        if(Auth::user()->id_status != 1 && Auth::user()->id_status != 4  ){
 //            abort(404);
 //        }
-        if(Auth::user()->id_status != 1 && Auth::user()->id_status != 3 ){
+        if(Auth::user()->id_status !=3  ){
             session()->flash('error', 'Anda tidak memiliki akses.');
             return redirect()->back();
         }else{

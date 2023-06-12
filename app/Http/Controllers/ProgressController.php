@@ -64,4 +64,7 @@ class ProgressController extends Controller
          Progress::find($id_progress)->delete();
          return redirect()->route('progress.index')-> with('success', 'Progress Berhasil Dihapus');
      }
+    
+    
+     
 }

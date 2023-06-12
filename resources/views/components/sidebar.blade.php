@@ -5,6 +5,7 @@
                 <img class="slogo" src="{{asset('img/logo2.png')}}" alt="">
             </a>
         </div>
+        
         <ul class="sidebar-menu mt-3">
                 <li class="menu-header">Dashboard</li>
             <li class="nav-item dropdown {{ $type_menu === 'dashboard' ? 'active' : '' }}">
@@ -21,7 +22,7 @@
                     </li>
                 </ul>
             </li>
-                @if(Auth::user()->id_status != 1)
+                @if(Auth::user()->id_status != 1 && Auth::user()->id_status != 3)
             <li class="menu-header" hidden>Data User</li>
             <li class="nav-item dropdown {{ $type_menu === 'layout' ? 'active' : '' }}" hidden>
                 <a href="#"
@@ -70,15 +71,8 @@
                         <ul class="dropdown-menu">
                             <li class="{{ Request::is('layout-default-layout') ? 'active' : '' }}">
                                 <a class="nav-link"
-                                   href="{{ url('layout-default-layout') }}">Default Layout</a>
-                            </li>
-                            <li class="{{ Request::is('transparent-sidebar') ? 'active' : '' }}">
-                                <a class="nav-link"
-                                   href="{{ url('transparent-sidebar') }}">Transparent Sidebar</a>
-                            </li>
-                            <li class="{{ Request::is('layout-top-navigation') ? 'active' : '' }}">
-                                <a class="nav-link"
-                                   href="{{ url('layout-top-navigation') }}">Top Navigation</a>
+                                   href="{{ url('/admin/admin') }}">Admin</a>
+                                   
                             </li>
                         </ul>
                     </li>
@@ -102,6 +96,7 @@
                         </ul>
                     </li>
                     @endif
+
 {{--            <li class="{{ Request::is('blank-page') ? 'active' : '' }}">--}}
 {{--                <a class="nav-link"--}}
 {{--                    href="{{ url('blank-page') }}"><i class="far fa-square"></i> <span>Blank Page</span></a>--}}

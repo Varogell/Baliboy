@@ -25,46 +25,42 @@
             <div class="section-body">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Form Tambah Progress Anak</h4>
+                                <h4>Form Tambah Admin</h4>
                             </div>
                             <div class="card-body">
-                                <form method="post" action=" {{ route('show.store') }}">
+                                <form method="post" action=" {{ route('admin.store') }}">
                                     @csrf
                                 <div class="form-group">
-                                    <label>ID Anak</label>
-                                    <input name="id_progress" id="id_progress" value="" hidden="">
-                                    <select class="form-control" name="id_anak" id="id_anak">
-                                        @foreach($progress as $item)
-                                            <option value="{{ $item->id_anak }}">{{ $item->nama }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Bulan ke</label>
-                                    <select class="form-control" name="bulan_ke" id="bulan_ke">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Panjang Bayi</label>
+                                    <label>Nama Admin</label>
+                                    <input name="id" id="id" value="" hidden="">
+                                    <input name="id_status" id="id_status" value="2" hidden="">
                                     <input type="text"
-                                        class="form-control" name="panjang_bayi" id="panjang_bayi">
+                                        class="form-control" name="nama" id="nama">
                                 </div>
                                 <div class="form-group">
-                                    <label>Berat Bayi</label>
+                                    <label>Jenis Kelamin</label>
                                     <input type="text"
-                                        class="form-control" name="berat_bayi" id="berat_bayi">
+                                        class="form-control" name="jenisKelamin" id="jenisKelamin">
+                                </div>
+                                <div class="form-group">
+                                    <label>No Hape</label>
+                                    <input type="text"
+                                        class="form-control" name="noHp" id="noHp">
+                                </div>
+                                <div class="form-group">
+                                    <label>Alamat</label>
+                                    <textarea class="form-control"
+                                        data-height="150" name="alamat" id="alamat"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="text"
+                                        class="form-control" name="username" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="text"
+                                        class="form-control" name="password" id="password">
                                 </div>
                             <div class="card-footer text-right">
                                 <button class="btn btn-primary mr-1"

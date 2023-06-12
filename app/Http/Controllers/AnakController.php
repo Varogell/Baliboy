@@ -65,4 +65,5 @@ class AnakController extends Controller
          Anak::find($id_anak)->delete();
          return redirect()->route('anak.index')-> with('success', 'Anak Berhasil Dihapus');
      }
+     
 }

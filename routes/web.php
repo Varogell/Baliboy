@@ -11,6 +11,7 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,8 +33,13 @@ Route::group(['prefix' => 'admin'], function(){
     Route::Get('/dashboard',[dashboardController::class, 'index'])->middleware('must-admin');
     Route::resource('/anak', AnakController::class)->middleware('must-admin');
     Route::resource('/progress', ProgressController::class)->middleware('must-admin');
+    Route::resource('/show', ShowController::class)->middleware('must-admin');
+    Route::resource('/admin', AdminController::class)->middleware('must-admin');
+    
 
 });
+
+
 
 Route::Get('/testing',[GeraiController::class, 'showData']);
 

@@ -16,12 +16,12 @@
             <div class="section-body">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tabel Progress</h4>
+                                <h4>Tabel Progress Detail</h4>
                                 <div class="card-header-form">
                                     <div class="card-header-form">
                                         <form class="row mb-3 mt-5" action="" method="POST">
                                         <div class="input-group">
-                                            <a href="{{ route('progress.create') }}" class="btn btn-icon icon-left btn-success"><i class="fa-solid fa-plus"></i> Cetak Data</a>
+                                            <a href="{{ route('show.create') }}" class="btn btn-icon icon-left btn-success"><i class="fa-solid fa-plus"></i> Tambah Data</a>
                                             <input type="text" class="form-control ml-3" placeholder="Search" value="{{ (request()->cari) ? request()->cari : '' }}" name="cari" >
                                             <div class="input-group-btn">
                                                 <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
@@ -55,11 +55,11 @@
                                                 <td>{{ $k->panjang_bayi}}</td>
                                                 <td>{{ $k->berat_bayi}}</td>
                                                 <td>
-                                                        <form action="{{ route('progress.destroy',$k->id_progress) }}" method="POST">
-                                                        <a class="btn btn-primary" href="{{ route('progress.edit',$k->id_progress) }}">Edit</a>
+                                                        <form action="{{ route('show.destroy',$k->id_progress) }}" method="POST">
+                                                        <a class="btn btn-primary" href="{{ route('show.edit',$k->id_progress) }}">Editin</a>
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-danger">Deletein</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -77,6 +77,45 @@
                                 </div>
                             </div>
                 </div>
+            </div>
+
+            <!--Grafik-->
+        
+            <div class="table-responsive">
+            <html>
+                <head>
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
+                        
+                        
+                        google.charts.load('current', {'packages':['corechart']});
+                        google.charts.setOnLoadCallback(drawChart);
+                        
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                
+                                ['Bulan', 'Berat', 'Panjang'],
+                                @foreach ($progress as $k)
+                                [{{$k->bulan_ke}}, {{$k->berat_bayi}}, {{$k->panjang_bayi}}],
+                                @endforeach
+                        ]);
+                        
+                        var options = {
+                            title: 'Grafik Perkembangan Bayi {{$k->nama}}' ,
+                            curveType: 'function',
+                            legend: { position: 'bottom' }
+                        };
+                        
+                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                        
+                        chart.draw(data, options);
+                    }
+                    </script>
+                </head>
+            <body>
+            <div id="curve_chart" style="width: 900px; height: 500px"></div>
+            </body>
+            </html>
             </div>
 
         </section>

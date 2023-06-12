@@ -16,7 +16,7 @@
             <div class="section-body">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Tabel Kota</h4>
+                                <h4>Tabel Anak</h4>
                                 <div class="card-header-form">
                                     <div class="card-header-form">
                                         <form class="row mb-3 mt-5" action="" method="POST">
@@ -60,7 +60,7 @@
                                                 <td>{{ $k->telepon}}</td>
                                                 <td>
                                                         <form action="{{ route('anak.destroy',$k->id_anak) }}" method="POST">
-                                                        <a class="btn btn-info" href="">Show</a>
+                                                        <a class="btn btn-info" href="{{ route('show.show',$k->id_anak) }}">Show</a>
                                                         <a class="btn btn-primary" href="{{ route('anak.edit',$k->id_anak) }}">Edit</a>
                                                         @csrf
                                                         @method('DELETE')

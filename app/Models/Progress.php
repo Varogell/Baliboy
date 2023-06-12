@@ -28,10 +28,17 @@ protected $fillable = [
 
     public function getFullInfo()
     {
-        return $this->select('progress_babies.id_progress', 'anak.nama', 'anak.id_anak', 'progress_babies.bulan_ke', 'progress_babies.panjang_bayi', 'progress_babies.berat_bayi')
+        return $this->select('progress_babies.id_anak', 'progress_babies.id_progress', 'anak.nama', 'anak.id_anak', 'progress_babies.bulan_ke', 'progress_babies.panjang_bayi','progress_babies.id_anak', 'progress_babies.berat_bayi')
             ->join('anak', 'progress_babies.id_anak', '=', 'anak.id_anak')
             ->paginate(5);
     }
+    public function getinfo($id_anak)
+    {
+        return $this->select('progress_babies.id_anak', 'progress_babies.id_progress', 'anak.nama', 'progress_babies.bulan_ke', 'progress_babies.panjang_bayi','progress_babies.id_anak', 'progress_babies.berat_bayi')
+        ->where('progress_babies.id_anak','=', $id_anak)    
+        ->join('anak', 'progress_babies.id_anak', '=', 'anak.id_anak')->paginate(5);
+    }
+   
 }
 
 
