@@ -21,12 +21,8 @@
                                     <div class="card-header-form">
                                         <form class="row mb-3 mt-5" action="" method="POST">
                                         <div class="input-group">
-<<<<<<< HEAD
-                                            <a href="{{ route('progress.create') }}" class="btn btn-icon icon-left btn-success"><i class="fa-solid fa-plus"></i> Cetak Data</a>
-=======
                                             <a href="{{ route('progress.create') }}" class="btn btn-icon icon-left btn-success"><i class="fa-solid fa-plus"></i> Tambah Data</a>
                                             <a href="{{ route('cetak_pdf') }}" class="btn btn-icon icon-left btn-warning"><i class="fa-solid fa-plus"></i> Cetak Data</a>
->>>>>>> a49d70b12270eb96043f47b3b2e673aaa234fa8c
                                             <input type="text" class="form-control ml-3" placeholder="Search" value="{{ (request()->cari) ? request()->cari : '' }}" name="cari" >
                                             <div class="input-group-btn">
                                                 <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
@@ -55,13 +51,7 @@
                                             <tr>
                                                 <td>{{ $i++}}</td>
                                                 <td>{{ $k->id_progress}}</td>
-<<<<<<< HEAD
                                                 <td value="{{ $k->id_anak }}">{{ $k->nama}}</td>
-=======
-                                               
-                                                <td value="{{ $k->id_anak }}">{{ $k->nama}}</td>
-                                               
->>>>>>> a49d70b12270eb96043f47b3b2e673aaa234fa8c
                                                 <td>{{ $k->bulan_ke}}</td>
                                                 <td>{{ $k->panjang_bayi}}</td>
                                                 <td>{{ $k->berat_bayi}}</td>

@@ -31,7 +31,9 @@ Route::group(['prefix' => 'admin'], function(){
     Route::Post('/login',[AdminController::class, 'login_action'])->name('login.actionAdmin');
     Route::Get('logout',[AdminController::class, 'logout'])->name('logout');
     Route::Get('/dashboard',[dashboardController::class, 'index'])->middleware('must-admin');
+    Route::Get('/cetak_pdf',[ProgressController::class, 'cetak_pdf'])->name('cetak_pdf');
     Route::resource('/anak', AnakController::class)->middleware('must-admin');
+
     Route::resource('/progress', ProgressController::class)->middleware('must-admin');
     Route::resource('/show', ShowController::class)->middleware('must-admin');
     Route::resource('/admin', AdminController::class)->middleware('must-admin');
@@ -59,6 +61,19 @@ Route::Get('/order',[OrderController::class, 'index'])->name('order');
 
 Route::Get('/login',[UserController::class, 'login'])->name('login');
 Route::Post('/login',[UserController::class, 'login_action'])->name('login.action');
+
+// Route::Get('/index',[AwalController::class, 'index'])->name('index');
+
+Route::get('/index', function () {
+    return view('awal.index', ['type_menu' => 'index']);
+});
+Route::get('/aboutus', function () {
+    return view('awal.aboutus', ['type_menu' => 'aboutus']);
+});
+Route::get('/cntct', function () {
+    return view('awal.contact', ['type_menu' => 'contact']);
+});
+
 
 
 //Route::Post('admin/sesi/login', [admiLoginController::class, 'login'])->name('login');

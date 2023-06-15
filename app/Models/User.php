@@ -4,20 +4,14 @@ namespace App\Models;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
-
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Notifications\Notifiable;
 
 
 class User extends Authenticatable
 {
-<<<<<<< HEAD
+
     use HasFactory, HasApiTokens, Notifiable;
-=======
-    use HasApiTokens, HasFactory, Notifiable;
->>>>>>> a49d70b12270eb96043f47b3b2e673aaa234fa8c
 
     protected $table = 'master_account';
     protected $primaryKey ='id';
