@@ -18,7 +18,6 @@
           <div class="col-md-7">
             <span class="sub-text">Know Us</span>
             <h1><strong>About</strong> Us</h1>
-            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis assumenda, adipisci. Dolores provident a, fugiat laboriosam vel assumenda soluta officia cum doloribus blanditiis sunt necessitatibus excepturi dolorem, saepe totam sequi!</p>
           </div>
         </div>
       </div>
@@ -28,40 +27,51 @@
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
-            <h2 class="site-heading text-black mb-5">A Team of <strong>Dedicated Dentist</strong></h2>
+            <h2 class="site-heading text-black mb-5">A Team of <strong>Dedicated Baby</strong></h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 pr-md-5 text-left mb-5">
+          <div class="col-lg-3 pl-md-5 text-center">
             <div>
-              <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
-              <h3>Dr. Emily Sy</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-
-              <p class="mt-5">
-                <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-twitter"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-instagram"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-linkedin"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
-              </p>
+              <img src="images/person_1.jpg" alt="Image" class="w-50 mb-5 rounded-circle" hidden>
+              <h3 hidden>Varo</h3>
             </div>
           </div>
-          <div class="col-md-6 pl-md-5 text-left">
+          <div class="col-lg-3 pl-md-5 text-center">
             <div>
-              <img src="images/person_3.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
-              <h3>Dr. Vincent Uen</h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus doloremque totam repudiandae dolor dolores tenetur, porro unde cumque ullam quaerat quo officia. Autem ea, a vel quibusdam provident deserunt placeat.</p>
-
-              <p class="mt-5">
-                <a href="#" class="py-4 pl-0 pr-2"><span class="icon-facebook"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-twitter"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-instagram"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-linkedin"></span></a>
-                <a href="#" class="py-4 pl-2 pr-2"><span class="icon-heart"></span></a>
-              </p>
+              <img src="images/v.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
+              <h3>Varo</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 pl-md-5 text-center">
+            <div>
+              <img src="images/f.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
+              <h3>Farhan</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 pl-md-5 text-center">
+            <div>
+              <img src="images/i.jpg" alt="Image" class="w-50 mb-5 rounded-circle" hidden>
+              <h3 hidden>Ilham</h3>
+            </div>
+          </div>
+          <div class="row mb-5 justify-content-center">
+          <div class="col-lg-3 pl-md-5 text-center">
+            <div>
+              <img src="images/i.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
+              <h3>Ilham</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 pl-md-5 text-center">
+            <div>
+              <img src="images/b.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
+              <h3>Bagas</h3>
+            </div>
+          </div>
+          <div class="col-lg-3 pl-md-5 text-center">
+            <div>
+              <img src="images/p.jpg" alt="Image" class="w-50 mb-5 rounded-circle">
+              <h3>Valen</h3>
             </div>
           </div>
         </div>
@@ -72,30 +82,19 @@
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
-            <h2 class="site-heading text-black mb-5">See Our <strong>Services</strong></h2>
+            <h2 class="site-heading text-black mb-5">Our <strong>Services</strong></h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="site-block-feature-2 d-flex rounded mb-5">
-              <div class="mr-3">
-                <span class="icon flaticon-tooth-whitening font-weight-light "></span>
-              </div>
-              <div class="text">
-                <h3>Tooth Whitening</h3>
-                <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam facilis.</p>
-              </div>
-            </div>
-          </div>
 
           <div class="col-md-6 col-lg-4">
             <div class="site-block-feature-2 d-flex rounded mb-5">
               <div class="mr-3">
-                <span class="icon flaticon-stethoscope font-weight-light "></span>
+                <span class="icon flaticon-tooth font-weight-light "></span>
               </div>
               <div class="text">
-                <h3>Stethoscope</h3>
-                <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam facilis.</p>
+                <h3>Imunisasi</h3>
+                <p>Imunisasi penting diberikan pada bayi segera setelah ia lahir ke dunia. Imunisasi sendiri adalah cara untuk memperkuat kekebalan tubuh bayi dengan cara memasukkan vaksin, yakni virus atau bakteri yang sudah mati atau dilemahkan.</p>
               </div>
             </div>
           </div>
@@ -106,8 +105,8 @@
                 <span class="icon flaticon-dentist-chair font-weight-light "></span>
               </div>
               <div class="text">
-                <h3>Dentist Chair</h3>
-                <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam facilis.</p>
+                <h3>Timbang</h3>
+                <p>Penimbangan bayi dan balita setiap bulan juga dimaksudkan untuk dapat memantau tumbuh kembang bayi dan balita sehingga dapat dideteksi sedini mungkin masalah kesehatan yang dimiliki seorang bayi dan balita.</p>
               </div>
             </div>
           </div>
@@ -118,47 +117,14 @@
                 <span class="icon flaticon-tooth-pliers font-weight-light "></span>
               </div>
               <div class="text">
-                <h3>Tooth Pliers</h3>
-                <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam facilis.</p>
+                <h3>Perkembangan Bayi</h3>
+                <p>Kehadiran buah hati di tengah-tengah keluarga tentu membawa kebahagiaan bagi pasangan yang mengidamkan keluarga kecil yang bahagia. Pertumbuhan bayi sejak di dalam kandungan hingga lahir ke dunia pun akan memberikan rasa takjub.</p>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="site-block-feature-2 d-flex rounded mb-5">
-              <div class="mr-3">
-                <span class="icon flaticon-first-aid-kit font-weight-light "></span>
-              </div>
-              <div class="text">
-                <h3>First Aid Kit</h3>
-                <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam facilis.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="site-block-feature-2 d-flex rounded mb-5">
-              <div class="mr-3">
-                <span class="icon flaticon-dentist-tools font-weight-light "></span>
-              </div>
-              <div class="text">
-                <h3>Dentist Tools</h3>
-                <p>Sunt illum fugit doloremque eaque omnis dolor sint fuga eligendi quis magnam Laboriosam facilis.</p>
-              </div>
-            </div>
-          </div>
-
-          
 
         </div>
       </div>
     </div>
-    
 
-    <div class="promo py-5 bg-primary">
-      <div class="container text-center">
-        <span class="d-block h4 mb-3 font-weight-light text-white">Promo For Tooth Cleaning from <del>$140.00</del> now <strong class="font-weight-bold">$50.00</strong></span>
-        <div id="date-countdown" class="mt-0"></div>
-      </div>
-    </div>
 @endsection

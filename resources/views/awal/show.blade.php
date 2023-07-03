@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 
-@section('title', 'General Dashboard')
+@section('title', 'show')
 
 @section('main')
     <div class="site-mobile-menu">
@@ -12,7 +12,7 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
-    <div class="site-blocks-cover" style="background-image: url(images/cpg2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <!-- <div class="site-blocks-cover" style="background-image: url(images/cpg2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-7">
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>   -->
 
     <div class="site-block-1">
       <div class="container">
@@ -199,6 +199,7 @@
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
+            <br><br><br><br>
             <h2 class="site-heading text-black mb-5">Our <strong>Services</strong></h2>
           </div>
         </div>
@@ -244,7 +245,7 @@
       </div>
     </div>
 
-    <div class="site-block-half d-block d-lg-flex site-block-video">
+    <!-- <div class="site-block-half d-block d-lg-flex site-block-video">
       <div class="image bg-image order-2" style="background-image: url(images/cpg.jpg); ">
       </div>
       <div class="text order-1">
@@ -253,6 +254,104 @@
         <p>Silahkan Poppy Mommy yang anaknya mau seperti cipung bisa tanya ke raffi dan nagita, hehe. Kalau gak sanggup bisa tanya tanya dulu ke kami. Kami siap melayani poppy mommy untuk berkonsultasi. Kami juga nenyediakan layanan untuk imunisasi dan penimbangan bayi mommy poppy. Kami juga akan memberikan perkembangan kepada mommy poppy.</p>
       </div>
       
-    </div>
+    </div> -->
 
+    @auth
+    
+    <div class="site-section bg-light">
+        
+        <div class="container">
+        
+            <div class="card-body">
+            <form class="row mb-3 mt-5" action="{{ route('cari') }}" method="POST">
+    @csrf
+    <div class="col-md-6">
+        <div class="d-flex flex-row">
+            <input type="text" value="{{ (request()->cari) ? request()->cari : '' }}" name="cari" class="form-control" placeholder="cari anak">
+            <button type="submit" class="btn btn-primary ml-4">Cari</button>
+        </div>
+    </div>
+</form>
+                <div class="table-responsive">
+                    
+                        <table class="table-bordered table-md table">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>ID anak</th>
+                                            <th>Akte</th>
+                                            <th>Nama</th>
+                                            <th>TTL</th>
+                                            <th>Nama Ibu</th>
+                                            <th>Nama Ayah</th>
+                                            <th>Alamat</th>
+                                            <th>Telepon</th>
+                                            <th width="280px">Action</th>
+                                        </tr>
+                                        @php
+                                            $i=1;
+                                        @endphp
+                                        @foreach ($anak as $k)
+                                            <tr>
+                                                <td>{{ $i++}}</td>
+                                                <td>{{ $k->id_anak}}</td>
+                                                <td><img src="{{asset('file_upload')}}/{{$k->akte}}" style ="max-width: 90px"></td>
+                                                <td>{{ $k->nama}}</td>
+                                                <td>{{ $k->TTL}}</td>
+                                                <td>{{ $k->nama_ibu}}</td>
+                                                <td>{{ $k->nama_ayah}}</td>
+                                                <td>{{ $k->alamat}}</td>
+                                                <td>{{ $k->telepon}}</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="{{ route('show.show',$k->id_anak) }}">Show</a>
+
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                            </table>
+                </div>
+                
+            </div>
+             <!--Grafik-->
+        
+            <div class="table-responsive">
+            <html>
+                <head>
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
+                        
+                        
+                        google.charts.load('current', {'packages':['corechart']});
+                        google.charts.setOnLoadCallback(drawChart);
+                        
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                
+                                ['Bulan', 'Berat', 'Panjang'],
+                                @foreach ($anak as $k)
+                                [{{$k->bulan_ke}}, {{$k->berat_bayi}}, {{$k->panjang_bayi}}],
+                                @endforeach
+                        ]);
+                        
+                        var options = {
+                            title: 'Grafik Perkembangan Bayi {{$k->nama}}' ,
+                            curveType: 'function',
+                            legend: { position: 'bottom' }
+                        };
+                        
+                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                        
+                        chart.draw(data, options);
+                    }
+                    </script>
+                </head>
+            <body>
+            <div id="curve_chart" style="width: 900px; height: 500px"></div>
+            </body>
+            </html>
+            </div>
+
+
+        </div>
+    </div>
+    @endauth
 @endsection

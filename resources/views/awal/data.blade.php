@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 
-@section('title', 'General Dashboard')
+@section('title', 'Data')
 
 @section('main')
     <div class="site-mobile-menu">
@@ -195,7 +195,7 @@
     </div> -->
 
     
-    <div class="site-section bg-light">
+    <!-- <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
@@ -253,6 +253,63 @@
         <p>Silahkan Poppy Mommy yang anaknya mau seperti cipung bisa tanya ke raffi dan nagita, hehe. Kalau gak sanggup bisa tanya tanya dulu ke kami. Kami siap melayani poppy mommy untuk berkonsultasi. Kami juga nenyediakan layanan untuk imunisasi dan penimbangan bayi mommy poppy. Kami juga akan memberikan perkembangan kepada mommy poppy.</p>
       </div>
       
-    </div>
+    </div> -->
 
+    @auth
+    
+    <div class="site-section bg-light">
+        
+        <div class="container">
+        
+            <div class="card-body">
+            <form class="row mb-3 mt-5" action="{{ route('cari') }}" method="POST">
+    @csrf
+    <div class="col-md-6">
+        <div class="d-flex flex-row">
+            <input type="text" value="{{ (request()->cari) ? request()->cari : '' }}" name="cari" class="form-control" placeholder="cari anak">
+            <button type="submit" class="btn btn-primary ml-4">Cari</button>
+        </div>
+    </div>
+</form>
+                <div class="table-responsive">
+                    
+                        <table class="table-bordered table-md table">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>ID anak</th>
+                                            <th>Akte</th>
+                                            <th>Nama</th>
+                                            <th>TTL</th>
+                                            <th>Nama Ibu</th>
+                                            <th>Nama Ayah</th>
+                                            <th>Alamat</th>
+                                            <th>Telepon</th>
+                                            <th width="280px">Action</th>
+                                        </tr>
+                                        @php
+                                            $i=1;
+                                        @endphp
+                                        @foreach ($anak as $k)
+                                            <tr>
+                                                <td>{{ $i++}}</td>
+                                                <td>{{ $k->id_anak}}</td>
+                                                <td><img src="{{asset('file_upload')}}/{{$k->akte}}" style ="max-width: 90px"></td>
+                                                <td>{{ $k->nama}}</td>
+                                                <td>{{ $k->TTL}}</td>
+                                                <td>{{ $k->nama_ibu}}</td>
+                                                <td>{{ $k->nama_ayah}}</td>
+                                                <td>{{ $k->alamat}}</td>
+                                                <td>{{ $k->telepon}}</td>
+                                                <td>
+                                                    <a class="btn btn-info" href="{{ route('show',$k->id_anak) }}">Show</a>
+
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                            </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endauth
 @endsection

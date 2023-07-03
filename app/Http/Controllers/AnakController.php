@@ -34,9 +34,18 @@ class AnakController extends Controller
         //     ]);
             //fungsi eloquent untuk menambah data
 
-            if($request->file('akte')){
-                $akte = $request->file('akte')->store('storage','public');
+            if($request->hasFile('akte')){
+
+                $akte = $request->file('akte'); 
+                // ->store('images','public');
+
+                $destinationPath = public_path('images');
+
+                $imageName = time() . '.' . $akte->getClientOriginalExtension();
+
+                $akte->move($destinationPath, $imageName);
             }
+            
             Anak::create($request->all());
             //jika data berhasil ditambahkan, akan kembali ke halaman utama
             return to_route('anak.index')->with('success', 'Anak Berhasil Ditambahkan');

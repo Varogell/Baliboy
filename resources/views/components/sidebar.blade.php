@@ -16,10 +16,6 @@
                         <a class="nav-link"
                             href="{{ url('index') }}">General Dashboard</a>
                     </li>
-                    <li class="{{ Request::is('dashboard-ecommerce-dashboard') ? 'active' : '' }}">
-                        <a class="nav-link"
-                            href="{{ url('dashboard-ecommerce-dashboard') }}">Ecommerce Dashboard</a>
-                    </li>
                 </ul>
             </li>
                 @if(Auth::user()->id_status != 1 && Auth::user()->id_status != 3)
@@ -88,10 +84,6 @@
                             <li class="{{ Request::is('2') ? 'active' : '' }}">
                                 <a class="nav-link"
                                    href="{{ url('/admin/progress') }}">Progress Anak</a>
-                            </li>
-                            <li class="{{ Request::is('3') ? 'active' : '' }}">
-                                <a class="nav-link"
-                                   href="{{ url('layout-top-navigation') }}">Comming soon</a>
                             </li>
                         </ul>
                     </li>

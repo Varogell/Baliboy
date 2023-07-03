@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     function __construct()
-   {
+    {
       $this->middleware('must-manager')->only('create','store');
-   }
+    }
     public function index(){
 
         $data['title'] = 'Login';
@@ -59,13 +59,13 @@ class AdminController extends Controller
     {
          //melakukan validasi data
          $request->validate([
-            'id_status' => 'required',
             'nama' => 'required',
             'jenisKelamin' => 'required',
             'noHp' => 'required',
             'alamat' => 'required',
-            'username' => 'required|unique:master_account',
+            'username' => 'required',
             'password' => 'required',
+            'id_status' => 'required',
             ]);
 
         //fungsi eloquent untuk mengupdate data inputan kita

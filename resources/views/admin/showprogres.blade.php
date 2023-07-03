@@ -31,6 +31,11 @@
                                     </div>
                                 </div>
                             </div>
+                            @if(session()->has('error'))
+                                <div class="alert alert-danger">
+                                    {{ session()->get('error') }}
+                                </div>
+                            @endif
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <table class="table-bordered table-md table">

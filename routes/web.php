@@ -12,6 +12,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnakController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\AwalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,19 +52,14 @@ Route::Get('/form',[DashboardController::class ,'index'])->middleware('must-admi
 Route::Get('/register2',[UserController::class, 'register'])->name('register');
 Route::Post('/register2',[UserController::class, 'register_action'])->name('register.action');
 
-Route::get('/logiswift', [HomeController::class, 'index'])->name('home');
-Route::get('/services', [ServicesController::class, 'index'])->name('services');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::Get('logout-user',[UserController::class, 'logout'])->name('logout-user');
-Route::Get('/order',[OrderController::class, 'index'])->name('order');
-
-
 
 Route::Get('/login',[UserController::class, 'login'])->name('login');
 Route::Post('/login',[UserController::class, 'login_action'])->name('login.action');
 
-// Route::Get('/index',[AwalController::class, 'index'])->name('index');
+Route::Get('/data',[AwalController::class, 'data'])->name('data');
 
+Route::Get('/show/{id_anak}',[AwalController::class, 'show'])->name('show');
 Route::get('/index', function () {
     return view('awal.index', ['type_menu' => 'index']);
 });
@@ -73,7 +69,7 @@ Route::get('/aboutus', function () {
 Route::get('/cntct', function () {
     return view('awal.contact', ['type_menu' => 'contact']);
 });
-
+Route::post('cari', [AwalController::class, 'cari'])->name('cari');
 
 
 //Route::Post('admin/sesi/login', [admiLoginController::class, 'login'])->name('login');

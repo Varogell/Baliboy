@@ -59,7 +59,7 @@
                                                 <td>{{ $k->username}}</td>
                                                 <td>
                                                         <form action="{{ route('admin.destroy',$k->id) }}" method="POST">
-                                                        <a class="btn btn-info" href="{{ route('admin.show',$k->id) }}">Show</a>
+                                                        <!-- <a class="btn btn-info" href="{{ route('admin.show',$k->id) }}">Show</a> -->
                                                         <a class="btn btn-primary" href="{{ route('admin.edit',$k->id) }}">Edit</a>
                                                         @csrf
                                                         @method('DELETE')

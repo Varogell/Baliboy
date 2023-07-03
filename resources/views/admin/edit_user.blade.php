@@ -63,7 +63,7 @@
                                         class="form-control" name="username" id="username" value="{{ $admin->username }}">
                                 </div>
                                 <div class="form-group">
-                                    <label>Bulan ke</label>
+                                    <label>Status</label>
                                     <select class="form-control" name="id_status" id="id_status">
                                     @foreach ($status as $k)
                                     <option value="{{ $k->id_status }}">{{ $k->nameStatus }}</option>

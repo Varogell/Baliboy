@@ -150,7 +150,7 @@ a {
 
 .bg-image {
   background-size: cover;
-  background-repeat: no-rpeeat;
+  background-repeat: no-repeat;
   overflow: hidden; }
   .bg-image.center {
     background-position: top center; }
@@ -183,7 +183,7 @@ a {
   width: 100%;
   left: 0; }
   .site-navbar-wrap a {
-    color: #fff; }
+    color: #000000; }
   .site-navbar-wrap .site-navbar-top {
     font-size: 0.8rem; }
 
@@ -198,7 +198,7 @@ a {
     font-weight: 200; }
     .site-navbar .site-logo a {
       font-weight: 200;
-      color: #fff; }
+      color: black; }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a {
@@ -214,7 +214,7 @@ a {
         padding: 10px 10px;
         text-transform: uppercase;
         letter-spacing: .05em;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(2, 2, 2, 0.6);
         font-size: 15px;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
@@ -516,9 +516,7 @@ a {
 
 .site-block-appointment, .bg-light {
   background: #ece8d9 !important; }
-  .site-block-appointment form, .bg-light form {
-    -webkit-box-shadow: 0 5px 20px -2px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 5px 20px -2px rgba(0, 0, 0, 0.1); }
+
 
 .text-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }
@@ -532,7 +530,7 @@ a {
   .site-block-feature .icon {
     font-size: 50px; }
   .site-block-feature h3 {
-    font-size: 15px;
+    font-size: 25px;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: #fff; }

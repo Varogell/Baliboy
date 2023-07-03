@@ -59,13 +59,14 @@ class UserController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/logiswift');
+        return redirect('/index');
     }
 
     public function login_action(Request $request, User $user)
     {
         if(Auth::attempt(['username'=>$request->username, 'password' => $request->password])) {
-            return response()->json(['error'=>'Your Credential Is Wrong', 401]);
+            $request->session()->regenerate();
+            return redirect()->intended('/index');
         }
 
         $user = $user -> find(Auth::user()->id);

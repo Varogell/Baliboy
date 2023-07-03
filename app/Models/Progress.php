@@ -34,9 +34,9 @@ protected $fillable = [
     }
     public function getinfo($id_anak)
     {
-        return $this->select('progress_babies.id_anak', 'progress_babies.id_progress', 'anak.nama', 'progress_babies.bulan_ke', 'progress_babies.panjang_bayi','progress_babies.id_anak', 'progress_babies.berat_bayi')
+        return $this->select('progress_babies.*','anak.*')
         ->where('progress_babies.id_anak','=', $id_anak)    
-        ->join('anak', 'progress_babies.id_anak', '=', 'anak.id_anak')->paginate(5);
+        ->join('anak', 'progress_babies.id_anak', '=', 'anak.id_anak')->paginate(6);
     }
    
 }
